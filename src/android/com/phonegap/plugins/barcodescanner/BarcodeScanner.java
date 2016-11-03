@@ -135,6 +135,7 @@ public class BarcodeScanner extends CordovaPlugin {
 
                 Intent intentScan = new Intent(SCAN_INTENT);
                 intentScan.addCategory(Intent.CATEGORY_DEFAULT);
+                intentScan.putExtra(Intents.Scan.SAVE_HISTORY, false);
 
                 // add config as intent extras
                 if (args.length() > 0) {
